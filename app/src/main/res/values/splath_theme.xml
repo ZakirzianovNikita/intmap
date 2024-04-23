@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Intmap.Splash" parent="Theme.Intmap">
+        <item name="windowSplashScreenBackground">#253861</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/vector</item>
+        <item name="postSplashScreenTheme">@style/Theme.Intmap</item>
+    </style>
+</resources>
