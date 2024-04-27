@@ -111,7 +111,7 @@ class MainActivity : ComponentActivity(), UserLocationObjectListener, Session.Se
             PointF((mapview.width *0.5).toFloat(),(mapview.height *0.83).toFloat())
         )
         userLocationView.arrow.setIcon(ImageProvider.fromResource(this, R.drawable.user_arrow))
-        val picIcon = UserLocationView.pin.useCompositeIcon()
+        val picIcon = userLocationView.pin.useCompositeIcon()
         picIcon.setIcon("Icon", ImageProvider.fromResource(this, R.drawable.search_result), IconStyle().
         setAnchor(PointF(0f,0f))
             .setRotationType(RotationType.NO_ROTATION).setZIndex(0f).setScale(1f)
