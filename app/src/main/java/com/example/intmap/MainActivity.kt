@@ -47,7 +47,6 @@ import com.yandex.runtime.network.NetworkError
 import com.yandex.runtime.network.RemoteError
 
 class MainActivity : ComponentActivity(), UserLocationObjectListener, Session.SearchListener, CameraListener {
-    private lateinit var mapView: MapView
     lateinit var mapview:MapView
     lateinit var lokationmapkit:UserLocationLayer
     lateinit var searchEdit:EditText
@@ -61,10 +60,10 @@ class MainActivity : ComponentActivity(), UserLocationObjectListener, Session.Se
         MapKitFactory.setApiKey("e6dcd208-4550-43a2-a331-56b4f0005201")
         MapKitFactory.initialize(this)
         setContentView(R.layout.activity_main)
-        mapView = findViewById(R.id.mapview)
+        mapview = findViewById(R.id.mapview)
         var mapKit:MapKit = MapKitFactory.getInstance()
         requstLocationPermission()
-        var locationonmapkit = mapKit.createUserLocationLayer(mapView.mapWindow)
+        var locationonmapkit = mapKit.createUserLocationLayer(mapview.mapWindow)
         locationonmapkit.isVisible = true
         lokationmapkit=mapKit.createUserLocationLayer(mapview.mapWindow)
         lokationmapkit.isVisible = true
@@ -96,11 +95,11 @@ class MainActivity : ComponentActivity(), UserLocationObjectListener, Session.Se
     override fun onStart() {
         super.onStart()
         MapKitFactory.getInstance().onStart()
-        mapView.onStart()
+        mapview.onStart()
     }
 
     override fun onStop() {
-        mapView.onStop()
+        mapview.onStop()
         MapKitFactory.getInstance().onStop()
         super.onStop()
     }
@@ -128,7 +127,7 @@ class MainActivity : ComponentActivity(), UserLocationObjectListener, Session.Se
     }
 
     override fun onSearchResponse(response: Response) {
-        val mapObjects:MapObjectCollection = mapView.map.mapObjects
+        val mapObjects:MapObjectCollection = mapview.map.mapObjects
         mapObjects.clear()
         for(searchResult in response.collection.children){
             val resultLocation = searchResult.obj!!.geometry[0].point!!
