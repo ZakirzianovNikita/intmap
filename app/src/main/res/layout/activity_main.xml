@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -8,6 +9,48 @@
         android:id="@+id/mapview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#253861" />
+        android:background="#253861"
+        tools:layout_editor_absoluteX="184dp"
+        tools:layout_editor_absoluteY="0dp" />
 
-</LinearLayout>
+    <Button
+        android:id="@+id/btntraffic"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/shape_button_traffic_footer"
+        android:backgroundTint="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="160dp"
+        android:layout_height="55dp"
+        android:background="@drawable/shape_button_footer"
+        android:backgroundTint="#3E64DA"
+        android:text="@string/planing_route"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:layout_width="160dp"
+        android:layout_height="55dp"
+        android:background="@drawable/shape_button_footer"
+        android:backgroundTint="#3E64DA"
+        android:text="@string/complete_routes"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

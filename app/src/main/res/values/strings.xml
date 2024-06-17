@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">intmap</string>
+    <string name="app_name">Route Planer</string>
+    <string name="planing_route">Составить маршрут</string>
+    <string name="complete_routes">Готовые маршруты</string>
 </resources>
